@@ -1,0 +1,86 @@
+{
+  "model": "vit_small_patch16_224.augreg_in21k_ft_in1k",
+  "architecture": "Pure Vision Transformer (ViT-S/16)",
+  "classes": [
+    "anger",
+    "disgust",
+    "fear",
+    "happiness",
+    "neutral",
+    "sadness",
+    "surprise"
+  ],
+  "input_shape": ["batch_size", 3, 224, 224],
+  "output_shape": ["batch_size", 7],
+  "preprocessing": "YuNet square face crop, grayscale repeated to three channels, ImageNet normalization",
+  "training_sources": ["FERPlus", "RAVDESS", "CREMA-D FaceVote >= 50%", "KDEF", "KDEF synthetic glasses augmentation"],
+  "identity_separation": {
+    "RAVDESS": true,
+    "CREMA-D": true,
+    "KDEF": true,
+    "FERPlus": "official dataset splits; identity overlap unknown"
+  },
+  "checkpoint_selection": {
+    "method": "best validation-compatible glasses-adapted checkpoint",
+    "selected_epoch": 1,
+    "ensemble": false,
+    "additional_inference_cost": false
+  },
+  "eyewear_adaptation": {
+    "training_identities": "KDEF person numbers 01-25",
+    "validation_identities": "KDEF person numbers 26-30",
+    "final_test_identities": "KDEF person numbers 31-35",
+    "augmentation": "landmark-placed synthetic frames, tinted lenses, and glare",
+    "synthetic_product_test_accuracy_before": 0.564286,
+    "synthetic_product_test_accuracy_after": 0.685714,
+    "synthetic_glasses_anger_recall_before": 0.05,
+    "synthetic_glasses_anger_recall_after": 0.6,
+    "report": "output/glasses-product-candidate-benchmark.json",
+    "scope": "Synthetic eyewear robustness check, not a measurement on real glasses or the laboratory camera"
+  },
+  "onnx_verification": {
+    "max_absolute_difference": 8.046627044677734e-07,
+    "mean_absolute_difference": 4.789658873960434e-07,
+    "same_top_class": true
+  },
+  "artifacts": {
+    "fp32": {
+      "file": "models/vit_emotion_seven.onnx",
+      "sha256": "3d32638519b1e7b560f43a071a8e15475803d6924e7bfec37c4f80f3670541f8"
+    },
+    "int8": {
+      "file": "models/vit_emotion_seven_int8.onnx",
+      "sha256": "76b13e8a0256736450fa006d4dabb59166a26596abe8bb164d0e27f3fd2e26dc"
+    }
+  },
+  "held_out_test": {
+    "ferplus_private_test": {
+      "examples": 3137,
+      "accuracy": 0.882372,
+      "macro_f1": 0.80277,
+      "report": "training/runs/vit-small-seven-glasses-v1/ferplus_test_int8.json"
+    },
+    "ravdess_actor_disjoint": {
+      "actors": [21, 22, 23, 24],
+      "videos": 208,
+      "frames_per_video": 5,
+      "accuracy": 0.581731,
+      "macro_f1": 0.561314,
+      "report": "training/runs/vit-small-seven-glasses-v1/ravdess_complete_test.json"
+    },
+    "cremad_actor_disjoint": {
+      "videos": 701,
+      "accuracy": 0.620542,
+      "macro_f1_supported_six_classes": 0.571449,
+      "report": "training/runs/vit-small-seven-glasses-v1/cremad_test_breakdown.json"
+    },
+    "kdef_identity_disjoint": {
+      "identities": 10,
+      "examples": 418,
+      "accuracy": 0.767943,
+      "macro_f1": 0.768782,
+      "report": "training/runs/vit-small-seven-glasses-v1/kdef_test_int8.json"
+    }
+  },
+  "limitations": "The glasses augmentation is synthetic and does not cover every frame shape, prescription, glare pattern, pose, or camera. Dataset metrics are not a guarantee for webcam scenes or a measurement of internal emotional state. A fresh laboratory camera session with real glasses is needed for an unbiased target-camera assessment."
+}

@@ -1,0 +1,11 @@
+{
+  "source": "https://huggingface.co/HardlyHumans/Facial-expression-detection",
+  "revision": "32132bdc0b6c9ad71e47a905db5cdf0ae51de85d",
+  "model_sha256": "95763e110ed7cadd1e63dc3d10a9408fda56910b9b4248c6f745687558e930fe",
+  "published_weights_format": "model.safetensors",
+  "published_weights_sha256": "95763e110ed7cadd1e63dc3d10a9408fda56910b9b4248c6f745687558e930fe",
+  "conversion": null,
+  "license": "No license declared in model-card metadata; deployment rights not established.",
+  "scope": "Public candidate models; claimed metrics not trusted as measured local accuracy. External training-set overlap with local benchmarks must be disclosed.",
+  "remote_code_executed": false
+}

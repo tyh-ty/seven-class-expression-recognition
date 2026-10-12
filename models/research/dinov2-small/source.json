@@ -1,0 +1,11 @@
+{
+  "source": "https://huggingface.co/timm/vit_small_patch14_dinov2.lvd142m",
+  "revision": "4610ca143709d58a633b6397a74412c2c3842454",
+  "model_sha256": "04d27f3400d059fc0cfd7d17dd1909a75bf3ea8fb3eeb48b97cb99e57ee20081",
+  "published_weights_format": "model.safetensors",
+  "published_weights_sha256": "04d27f3400d059fc0cfd7d17dd1909a75bf3ea8fb3eeb48b97cb99e57ee20081",
+  "conversion": null,
+  "license": "apache-2.0",
+  "scope": "Public candidate models; claimed metrics not trusted as measured local accuracy. External training-set overlap with local benchmarks must be disclosed.",
+  "remote_code_executed": false
+}

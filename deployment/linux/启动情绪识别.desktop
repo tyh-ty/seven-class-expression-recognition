@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=启动情绪识别
+Comment=启动本地表情识别服务并打开浏览器
+Exec=bash -c "p=\\$1; if [[ \\$p == file://* ]]; then p=\\${p#file://}; p=\\${p//\\\\\\\\/\\\\\\\\\\\\\\\\}; printf -v p '%%b' \\"\\${p//%%/\\\\\\\\x}\\"; fi; exec bash \\"\\$(dirname -- \\"\\$p\\")/start.sh\\"" emotion-launcher %k
+Icon=face-smile
+Terminal=true
+StartupNotify=false
+Categories=Education;Science;

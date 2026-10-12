@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/Talented-Q/POSTER_V2",
+  "official_readme_link": "https://drive.google.com/file/d/1c_gp5UdlcMjIB2dZtdhXFfHOQg1OqU-D/view",
+  "started_at": "2026-09-28T00:00:40.390159+00:00",
+  "status": "download-failed",
+  "error": "HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=1c_gp5UdlcMjIB2dZtdhXFfHOQg1OqU-D (Caused by ConnectTimeoutError(<HTTPSConnection(host='drive.google.com', port=443) at 0x237fd4c9cd0>, 'Connection to drive.google.com timed out. (connect timeout=None)'))"
+}

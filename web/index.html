@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>七类面部表情识别系统</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/styles.css?v=20260927-speech" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">LOCAL FACIAL EXPRESSION SYSTEM</p>
+          <h1>七类面部表情识别系统</h1>
+          <p class="subtitle">摄像头与图片识别 · 本地运行 · 数据不上传</p>
+        </div>
+        <div id="healthBadge" class="status-badge pending">正在检查模型</div>
+      </header>
+
+      <section class="notice">
+        <strong>识别七种面部表情</strong>
+        <span>愤怒、厌恶、恐惧、开心、中性、悲伤、惊讶。光线、角度和遮挡会影响识别结果。</span>
+      </section>
+
+      <section class="workspace">
+        <div class="stage-panel">
+          <div class="stage-toolbar">
+            <div class="toolbar-modes">
+              <div class="segmented" role="tablist" aria-label="输入方式">
+                <button id="cameraTab" class="segment active" type="button">摄像头</button>
+                <button id="imageTab" class="segment" type="button">图片</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="cameraSource" class="source-view active">
+            <div class="media-frame">
+              <video id="video" autoplay muted playsinline></video>
+              <canvas id="overlay"></canvas>
+              <div id="cameraEmpty" class="empty-state">
+                <div class="empty-icon">◉</div>
+                <h2>打开摄像头开始观察</h2>
+                <p>画面只在当前电脑中处理</p>
+              </div>
+              <div id="cameraState" class="media-state">摄像头未开启</div>
+            </div>
+            <div class="source-actions">
+              <button id="startCamera" class="primary-button" type="button">打开摄像头</button>
+              <button id="stopCamera" class="secondary-button" type="button" disabled>停止</button>
+            </div>
+            <div class="speech-control">
+              <label class="speech-toggle" for="speechToggle">
+                <span>语音播报</span>
+                <input id="speechToggle" type="checkbox" role="switch" aria-describedby="speechHint speechStatus" />
+                <span class="switch-track" aria-hidden="true"></span>
+              </label>
+              <p id="speechHint" class="speech-hint">仅播报最近一人的表情，按人脸大小估计远近</p>
+              <p id="speechStatus" class="speech-status" role="status">播报已关闭</p>
+            </div>
+          </div>
+
+          <div id="imageSource" class="source-view">
+            <div id="dropZone" class="drop-zone">
+              <input id="imageInput" type="file" accept="image/*" hidden />
+              <div class="upload-icon">↑</div>
+              <h2>选择一张人脸图片</h2>
+              <p>支持 JPG、PNG、WEBP · 图片不离开本机</p>
+              <button id="chooseImage" class="secondary-button" type="button">选择图片</button>
+            </div>
+            <div id="imageResult" class="image-result hidden">
+              <div class="media-frame image-frame">
+                <img id="imagePreview" alt="待识别图片" />
+                <canvas id="imageOverlay"></canvas>
+              </div>
+              <button id="clearImage" class="secondary-button" type="button">换一张图片</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="results-panel">
+          <div class="results-heading">
+            <div>
+              <p class="eyebrow">INFERENCE OUTPUT</p>
+              <h2>识别结果</h2>
+            </div>
+            <span id="faceCount" class="count-badge">0 张脸</span>
+          </div>
+          <div class="class-summary" aria-label="七种表情类别">
+            <span>愤怒</span><span>厌恶</span><span>恐惧</span><span>开心</span>
+            <span>中性</span><span>悲伤</span><span>惊讶</span>
+          </div>
+
+          <div id="noResult" class="result-placeholder">
+            <span class="placeholder-mark">—</span>
+            <p>等待画面中出现人脸</p>
+          </div>
+
+          <div id="resultContent" class="hidden">
+            <div class="primary-result">
+              <div>
+                <p class="result-label">最近一人的表情倾向</p>
+                <h3 id="primaryEmotion">—</h3>
+              </div>
+              <div id="primaryScore" class="primary-score">—</div>
+            </div>
+            <div class="confidence-meter"><span id="confidenceFill"></span></div>
+            <p id="predictionStatus" class="prediction-status" aria-live="polite"></p>
+            <div id="scoreList" class="score-list"></div>
+            <div class="feedback-control">
+              <button id="feedbackToggle" class="secondary-button feedback-toggle" type="button">识别不准</button>
+              <div id="feedbackChoices" class="feedback-choices hidden" aria-label="选择真实表情">
+                <button type="button" data-feedback-label="anger">愤怒</button>
+                <button type="button" data-feedback-label="disgust">厌恶</button>
+                <button type="button" data-feedback-label="fear">恐惧</button>
+                <button type="button" data-feedback-label="happiness">开心</button>
+                <button type="button" data-feedback-label="neutral">中性</button>
+                <button type="button" data-feedback-label="sadness">悲伤</button>
+                <button type="button" data-feedback-label="surprise">惊讶</button>
+              </div>
+              <p id="feedbackStatus" class="feedback-status" aria-live="polite"></p>
+            </div>
+            <div class="meta-row">
+              <span>推理耗时 <strong id="latency">—</strong></span>
+              <span>运行设备 <strong>CPU</strong></span>
+            </div>
+          </div>
+
+          <div class="legend">
+            <span><i class="dot low-dot"></i>表情置信度较低</span>
+            <span><i class="dot high-dot"></i>表情置信度较高</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="bottom-grid single-panel">
+        <div class="info-panel">
+          <p class="eyebrow">MODEL CARD</p>
+          <h2>模型配置</h2>
+          <dl class="model-facts">
+            <div><dt>人脸定位</dt><dd>YuNet 2023 + NMS</dd></div>
+            <div><dt>表情分类</dt><dd id="classificationModel">真实样本校准 ViT-S/16 (FP32 · 20260928)</dd></div>
+            <div><dt>模型架构</dt><dd id="modelArchitecture">纯 Vision Transformer (ViT-S/16)</dd></div>
+            <div><dt>输入尺寸</dt><dd id="modelInput">224 × 224 灰度方形人脸</dd></div>
+            <div><dt>输出类别</dt><dd>7 类面部表情</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <footer>七类面部表情识别系统 · <span id="footerModel">自训练 ViT-S/16</span> · 本地推理</footer>
+    </main>
+    <script src="/emotion-speech.js?v=20260927-speech" defer></script>
+    <script src="/app.js?v=20260928-visible-predictions" defer></script>
+  </body>
+</html>

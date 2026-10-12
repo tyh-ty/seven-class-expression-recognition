@@ -1,0 +1,13 @@
+{
+  "id2label": {
+    "0": "anger",
+    "1": "disgust",
+    "2": "fear",
+    "3": "happy",
+    "4": "neutral",
+    "5": "sad",
+    "6": "surprise"
+  },
+  "evidence": "Pinned model card class list and publisher classification_report.png/confusion_matrix.png show this order. config.json uses generic LABEL_0..6; no permutation chosen from evaluation labels. Confirm with training-only sanity examples before deployment.",
+  "revision": "68cbe4de6a93da0ec70267ab792b539311ad3d3f"
+}

@@ -1,0 +1,11 @@
+{
+  "source": "https://huggingface.co/youngp5/eyeglasses_detection",
+  "revision": "92b649d59ec05cf225dfd8440b7a1cf8f0ab946f",
+  "model_sha256": "f0f719f08ee60f19adf267e109938fa998ecb48e76d532e541a2cc11af7e91f0",
+  "published_weights_format": "pytorch_model.bin",
+  "published_weights_sha256": "a5f289a90b9ebd12368cc1c5fc887bd5a83fe6832d9f863eab3733049d6c3b28",
+  "conversion": "Tensor-only torch.load(weights_only=True), then safetensors; no custom object allowlist or remote model code.",
+  "license": "No license declared in model-card metadata; deployment rights not established.",
+  "scope": "Public candidate models; claimed metrics not trusted as measured local accuracy. External training-set overlap with local benchmarks must be disclosed.",
+  "remote_code_executed": false
+}

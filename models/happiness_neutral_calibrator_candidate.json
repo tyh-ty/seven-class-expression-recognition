@@ -1,0 +1,411 @@
+{
+  "features": [
+    "vit_happy_log_odds",
+    "mouth_width_eye",
+    "nose_mouth_eye",
+    "eye_mouth_width_ratio"
+  ],
+  "mean": [
+    -0.21472963736188122,
+    0.8110703950412269,
+    0.43093489704399235,
+    1.236711136487188
+  ],
+  "std": [
+    4.334846911316104,
+    0.044445013819551474,
+    0.0906002188762101,
+    0.0690384665819667
+  ],
+  "weights": [
+    -0.404913876677244,
+    3.5565089797576785,
+    0.11275360500023449,
+    0.3504211342479628,
+    -0.13838439199896396
+  ],
+  "train_missing": 28,
+  "val_missing": 1,
+  "train_binary_base": {
+    "confusion": [
+      [
+        80,
+        6
+      ],
+      [
+        2,
+        76
+      ]
+    ],
+    "accuracy": 0.9512195121951219,
+    "macro_f1": 0.9511904761904763,
+    "errors": [
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\happiness\\web_0073_web_0118_583d49e9e9.png",
+        "happiness",
+        0.113,
+        0.519,
+        null
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\happiness\\web_0096_web_0142_dac5836e74.png",
+        "happiness",
+        0.181,
+        0.71,
+        null
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\neutral\\web_0184_web_0214_7690505763.png",
+        "neutral",
+        0.824,
+        0.102,
+        null
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\neutral\\web_0186_web_0216_06424f6963.png",
+        "neutral",
+        0.893,
+        0.034,
+        null
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\neutral\\web_0214_web_0245_afeeb2d047.png",
+        "neutral",
+        0.517,
+        0.331,
+        null
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\neutral\\web_0224_web_0255_458587726f.png",
+        "neutral",
+        0.888,
+        0.03,
+        null
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\neutral\\web_0241_web_0274_84e07d14fc.png",
+        "neutral",
+        0.879,
+        0.036,
+        null
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\neutral\\web_0247_web_0280_e9378d4d7b.png",
+        "neutral",
+        0.484,
+        0.411,
+        null
+      ]
+    ]
+  },
+  "train_binary_calibrated": {
+    "confusion": [
+      [
+        81,
+        5
+      ],
+      [
+        3,
+        75
+      ]
+    ],
+    "accuracy": 0.9512195121951219,
+    "macro_f1": 0.9511541325390915,
+    "errors": [
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\happiness\\web_0073_web_0118_583d49e9e9.png",
+        "happiness",
+        0.113,
+        0.519,
+        0.226
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\happiness\\web_0096_web_0142_dac5836e74.png",
+        "happiness",
+        0.181,
+        0.71,
+        0.186
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\happiness\\web_0150_web_0268_20b96c5166.png",
+        "happiness",
+        0.018,
+        0.009,
+        0.498
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\neutral\\web_0184_web_0214_7690505763.png",
+        "neutral",
+        0.824,
+        0.102,
+        0.72
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\neutral\\web_0186_web_0216_06424f6963.png",
+        "neutral",
+        0.893,
+        0.034,
+        0.916
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\neutral\\web_0214_web_0245_afeeb2d047.png",
+        "neutral",
+        0.517,
+        0.331,
+        0.588
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\neutral\\web_0224_web_0255_458587726f.png",
+        "neutral",
+        0.888,
+        0.03,
+        0.912
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\train\\neutral\\web_0241_web_0274_84e07d14fc.png",
+        "neutral",
+        0.879,
+        0.036,
+        0.891
+      ]
+    ]
+  },
+  "val_binary_base": {
+    "confusion": [
+      [
+        21,
+        2
+      ],
+      [
+        0,
+        21
+      ]
+    ],
+    "accuracy": 0.9545454545454546,
+    "macro_f1": 0.9545454545454545,
+    "errors": [
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\val\\neutral\\web_0259_web_0293_5fe426bb70.png",
+        "neutral",
+        0.922,
+        0.013,
+        null
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\val\\neutral\\web_0268_web_0327_495f4e3937.png",
+        "neutral",
+        0.716,
+        0.088,
+        null
+      ]
+    ]
+  },
+  "val_binary_calibrated": {
+    "confusion": [
+      [
+        21,
+        2
+      ],
+      [
+        0,
+        21
+      ]
+    ],
+    "accuracy": 0.9545454545454546,
+    "macro_f1": 0.9545454545454545,
+    "errors": [
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\val\\neutral\\web_0259_web_0293_5fe426bb70.png",
+        "neutral",
+        0.922,
+        0.013,
+        0.958
+      ],
+      [
+        "data\\web-public\\human-face-emotions\\identity-split-v2\\val\\neutral\\web_0268_web_0327_495f4e3937.png",
+        "neutral",
+        0.716,
+        0.088,
+        0.822
+      ]
+    ]
+  },
+  "val_overall_base": {
+    "accuracy": 0.8533333333333334,
+    "core_f1": 0.8566331923890063,
+    "balanced": 0.860248447204969,
+    "happy_f1": 0.8837209302325582,
+    "neutral_f1": 0.909090909090909,
+    "confusion": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        6,
+        1,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        20,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        19
+      ]
+    ]
+  },
+  "val_overall_calibrated": {
+    "accuracy": 0.8533333333333334,
+    "core_f1": 0.8566331923890063,
+    "balanced": 0.860248447204969,
+    "happy_f1": 0.8837209302325582,
+    "neutral_f1": 0.909090909090909,
+    "confusion": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        6,
+        1,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        20,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        19
+      ]
+    ]
+  }
+}

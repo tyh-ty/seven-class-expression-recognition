@@ -1,0 +1,11 @@
+{
+  "official_repository": "https://github.com/sb-ai-lab/EmotiEffLib",
+  "commit": "520a051c64cd191521e5934655314e769a319684",
+  "url": "https://raw.githubusercontent.com/sb-ai-lab/EmotiEffLib/520a051c64cd191521e5934655314e769a319684/models/affectnet_emotions/onnx/enet_b2_7.onnx",
+  "git_blob_sha1": "cdd6a6070b72ed2e59e15e810ae0ecdbcb0f7626",
+  "sha256": "7863032d8c0c0bc259aa0dd7b8ebf6b607af454e7a0ea82be2b37767914ecd0f",
+  "bytes": 30774088,
+  "model": "enet_b2_7 native7",
+  "purpose": "Research benchmark/teacher; deployed classifier still pureViT",
+  "license": "Repository Apache2; official code and weights from same pinnedrepo"
+}

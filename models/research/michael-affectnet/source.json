@@ -1,0 +1,8 @@
+{
+  "source": "https://huggingface.co/michaelgathara/vit-face-affectnet",
+  "revision": "fe45987c7ce97626304117fab9d059cca9cd7d2b",
+  "model_sha256": "30b8401bc059b3af5b58485e1e6e3846cf3c6dcb9c069ca543a25406568021e1",
+  "license": "No license declared in model-card metadata; deployment rights not established.",
+  "scope": "Public candidate models; claimed metrics not trusted as measured local accuracy. External training-set overlap with local benchmarks must be disclosed.",
+  "remote_code_executed": false
+}

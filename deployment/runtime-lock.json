@@ -1,0 +1,113 @@
+{
+  "platform": "windows-x64",
+  "python": {
+    "file": "python-3.13.12-embed-amd64.zip",
+    "version": "3.13.12",
+    "url": "https://www.python.org/ftp/python/3.13.12/python-3.13.12-embed-amd64.zip",
+    "sha256": "76f238f606250c87c6beac75dccd35ee99070a13490555936abb6cb64ecce3d0",
+    "pth": "python313._pth",
+    "stdlib": "python313.zip"
+  },
+  "vc_redist": {
+    "file": "vc_redist.x64.exe",
+    "url": "https://download.visualstudio.microsoft.com/download/pr/bd1c8d9d-ba95-4eee-bc6e-df1fcc876373/CC0FF0EB1DC3F5188AE6300FAEF32BF5BEEBA4BDD6E8E445A9184072096B713B/VC_redist.x64.exe",
+    "sha256": "cc0ff0eb1dc3f5188ae6300faef32bf5beeba4bdd6e8e445a9184072096b713b"
+  },
+  "pip_wheel": "wheels/pip-25.3-py3-none-any.whl",
+  "wheels": [
+    {
+      "file": "wheels/coloredlogs-15.0.1-py2.py3-none-any.whl",
+      "name": "coloredlogs",
+      "version": "15.0.1",
+      "url": "https://files.pythonhosted.org/packages/a7/06/3d6badcf13db419e25b07041d9c7b4a2c331d3f4e7134445ec5df57714cd/coloredlogs-15.0.1-py2.py3-none-any.whl",
+      "sha256": "612ee75c546f53e92e70049c9dbfcc18c935a2b9a53b66085ce9ef6a6e5c0934"
+    },
+    {
+      "file": "wheels/flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "url": "https://files.pythonhosted.org/packages/e8/2d/d2a548598be01649e2d46231d151a6c56d10b964d94043a335ae56ea2d92/flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4"
+    },
+    {
+      "file": "wheels/humanfriendly-10.0-py2.py3-none-any.whl",
+      "name": "humanfriendly",
+      "version": "10.0",
+      "url": "https://files.pythonhosted.org/packages/f0/0f/310fb31e39e2d734ccaa2c0fb981ee41f7bd5056ce9bc29b2248bd569169/humanfriendly-10.0-py2.py3-none-any.whl",
+      "sha256": "1697e1a8a8f550fd43c2865cd84542fc175a61dcb779b6fee18cf6b6ccba1477"
+    },
+    {
+      "file": "wheels/mpmath-1.3.0-py3-none-any.whl",
+      "name": "mpmath",
+      "version": "1.3.0",
+      "url": "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl",
+      "sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"
+    },
+    {
+      "file": "wheels/numpy-2.2.6-cp313-cp313-win_amd64.whl",
+      "name": "numpy",
+      "version": "2.2.6",
+      "url": "https://files.pythonhosted.org/packages/cb/3b/d58c12eafcb298d4e6d0d40216866ab15f59e55d148a5658bb3132311fcf/numpy-2.2.6-cp313-cp313-win_amd64.whl",
+      "sha256": "b0544343a702fa80c95ad5d3d608ea3599dd54d4632df855e4c8d24eb6ecfa1c"
+    },
+    {
+      "file": "wheels/onnxruntime-1.23.2-cp313-cp313-win_amd64.whl",
+      "name": "onnxruntime",
+      "version": "1.23.2",
+      "url": "https://files.pythonhosted.org/packages/4a/93/aba75358133b3a941d736816dd392f687e7eab77215a6e429879080b76b6/onnxruntime-1.23.2-cp313-cp313-win_amd64.whl",
+      "sha256": "1f9cc0a55349c584f083c1c076e611a7c35d5b867d5d6e6d6c823bf821978088"
+    },
+    {
+      "file": "wheels/opencv_python_headless-4.13.0.92-cp37-abi3-win_amd64.whl",
+      "name": "opencv-python-headless",
+      "version": "4.13.0.92",
+      "url": "https://files.pythonhosted.org/packages/4a/90/b338326131ccb2aaa3c2c85d00f41822c0050139a4bfe723cfd95455bd2d/opencv_python_headless-4.13.0.92-cp37-abi3-win_amd64.whl",
+      "sha256": "77a82fe35ddcec0f62c15f2ba8a12ecc2ed4207c17b0902c7a3151ae29f37fb6"
+    },
+    {
+      "file": "wheels/packaging-26.3-py3-none-any.whl",
+      "name": "packaging",
+      "version": "26.3",
+      "url": "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl",
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+    },
+    {
+      "file": "wheels/pip-25.3-py3-none-any.whl",
+      "name": "pip",
+      "version": "25.3",
+      "url": "https://files.pythonhosted.org/packages/44/3c/d717024885424591d5376220b5e836c2d5293ce2011523c9de23ff7bf068/pip-25.3-py3-none-any.whl",
+      "sha256": "9655943313a94722b7774661c21049070f6bbb0a1516bf02f7c8d5d9201514cd"
+    },
+    {
+      "file": "wheels/protobuf-7.36.1-cp310-abi3-win_amd64.whl",
+      "name": "protobuf",
+      "version": "7.36.1",
+      "url": "https://files.pythonhosted.org/packages/db/37/155788a0d8daded960375af604202805308169f9b859419ea0aa370946e2/protobuf-7.36.1-cp310-abi3-win_amd64.whl",
+      "sha256": "51139351435d9b43d88a55eaa49fb6f737fbb478fb0cbf2cf694d1a04a9d3363"
+    },
+    {
+      "file": "wheels/pyreadline3-3.5.6-py3-none-any.whl",
+      "name": "pyreadline3",
+      "version": "3.5.6",
+      "url": "https://files.pythonhosted.org/packages/f7/5e/35c856e186b74678c24927847ad9895a51f1bc02a0c6126477a6c6040064/pyreadline3-3.5.6-py3-none-any.whl",
+      "sha256": "8449b734232e42a5dcd74048e39b60db2839a4c38cf3ae2bf7707d58b5389c0d"
+    },
+    {
+      "file": "wheels/sympy-1.14.0-py3-none-any.whl",
+      "name": "sympy",
+      "version": "1.14.0",
+      "url": "https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl",
+      "sha256": "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5"
+    }
+  ],
+  "models": [
+    {
+      "file": "models/face_detection_yunet_2023mar.onnx",
+      "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4"
+    },
+    {
+      "file": "models/vit_emotion_seven_fp32.onnx",
+      "sha256": "f9753ef6496707319576794704a0bae7674b46368305edbf366d538b2a7ce54f"
+    }
+  ]
+}

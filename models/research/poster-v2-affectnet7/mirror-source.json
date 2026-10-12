@@ -1,0 +1,10 @@
+{
+  "url": "https://hf-mirror.com/minhnguyent546/poster_v2_model_artifacts/resolve/396b49075db21805ff831193b492c606dc1178d1/affectnet-7-model_best.pth",
+  "revision": "396b49075db21805ff831193b492c606dc1178d1",
+  "expected_sha256": "7ca3533b076594ccd573d30c9b666167c8241e811a70f9cfe2b6a4586dcaf5b5",
+  "mirror_type": "third-party; author-byte equivalence and label order not yet verified",
+  "official_source": "https://github.com/Talented-Q/POSTER_V2",
+  "status": "downloaded-mirror-sha-verified",
+  "bytes": 238946217,
+  "sha256": "7ca3533b076594ccd573d30c9b666167c8241e811a70f9cfe2b6a4586dcaf5b5"
+}

@@ -1,0 +1,8 @@
+{
+  "source": "https://huggingface.co/Mauregato/vit-base-patch16-224-best-finetuned-on-affectnet_short",
+  "revision": "f45e825be0639eb23e5aea16af6c100019dd0d3b",
+  "model_sha256": "12795fd0ee47fe6f17267f7522279508838feb04514e50280a1a295bb1479b7f",
+  "license": "apache-2.0",
+  "scope": "Public candidate models; claimed metrics not trusted as measured local accuracy. External training-set overlap with local benchmarks must be disclosed.",
+  "remote_code_executed": false
+}

@@ -1,0 +1,11 @@
+{
+  "source": "https://huggingface.co/LaurenGurgiolo/vit-micro-facial-expressions",
+  "revision": "616ac2a55c59cba5c04e46e34bfda870ad157cf9",
+  "model_sha256": "659df23755cbc0f6461f971ecc8526f5f7baa81ba0bb234ef5f69b8442c802b3",
+  "published_weights_format": "model.safetensors",
+  "published_weights_sha256": "659df23755cbc0f6461f971ecc8526f5f7baa81ba0bb234ef5f69b8442c802b3",
+  "conversion": null,
+  "license": "afl-3.0",
+  "scope": "Public candidate models; claimed metrics not trusted as measured local accuracy. External training-set overlap with local benchmarks must be disclosed.",
+  "remote_code_executed": false
+}

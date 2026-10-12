@@ -1,0 +1,8 @@
+{
+  "source": "https://huggingface.co/jihedjabnoun/vit-face-emotion-recognition",
+  "revision": "ec667156e4f9a2e329911a1da5c13572ae3d75d4",
+  "model_sha256": "c01b4547c18b098ac857840527024efbc02acb6d15494c3aadc23ded75e35f4d",
+  "license": "Apache-2.0 per pinned publisher model card; retain attribution if deployed.",
+  "scope": "Public candidate models; claimed metrics not trusted as measured local accuracy. External training-set overlap with local benchmarks must be disclosed.",
+  "remote_code_executed": false
+}

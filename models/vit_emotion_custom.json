@@ -1,0 +1,238 @@
+{
+  "checkpoint": "training\\runs\\vit-small-ferplus-v5\\best.pt",
+  "onnx": "models\\vit_emotion_custom.onnx",
+  "model": "vit_small_patch16_224.augreg_in21k_ft_in1k",
+  "classes": [
+    "anger",
+    "contempt",
+    "disgust",
+    "fear",
+    "happiness",
+    "neutral",
+    "sadness",
+    "surprise"
+  ],
+  "input_shape": [
+    "batch_size",
+    3,
+    224,
+    224
+  ],
+  "output_shape": [
+    "batch_size",
+    8
+  ],
+  "max_absolute_difference": 1.1920928955078125e-06,
+  "mean_absolute_difference": 3.986060619354248e-07,
+  "same_top_class": true,
+  "training": {
+    "best_epoch": 13,
+    "class_weighting": "inverse-sqrt",
+    "class_counts": [
+      2100,
+      119,
+      119,
+      532,
+      7287,
+      8740,
+      3014,
+      3149
+    ],
+    "validation": {
+      "loss": 0.736172,
+      "accuracy": 0.886214,
+      "macro_f1": 0.805939,
+      "balanced_accuracy": 0.778162,
+      "per_class": {
+        "anger": {
+          "precision": 0.875912,
+          "recall": 0.836237,
+          "f1": 0.855615,
+          "support": 287
+        },
+        "contempt": {
+          "precision": 0.777778,
+          "recall": 0.538462,
+          "f1": 0.636364,
+          "support": 13
+        },
+        "disgust": {
+          "precision": 0.875,
+          "recall": 0.583333,
+          "f1": 0.7,
+          "support": 24
+        },
+        "fear": {
+          "precision": 0.811321,
+          "recall": 0.693548,
+          "f1": 0.747826,
+          "support": 62
+        },
+        "happiness": {
+          "precision": 0.924276,
+          "recall": 0.959538,
+          "f1": 0.941577,
+          "support": 865
+        },
+        "neutral": {
+          "precision": 0.922043,
+          "recall": 0.870558,
+          "f1": 0.895561,
+          "support": 1182
+        },
+        "sadness": {
+          "precision": 0.727506,
+          "recall": 0.806268,
+          "f1": 0.764865,
+          "support": 351
+        },
+        "surprise": {
+          "precision": 0.876126,
+          "recall": 0.937349,
+          "f1": 0.905704,
+          "support": 415
+        }
+      }
+    }
+  },
+  "test": {
+    "metrics": {
+      "loss": 0.746862,
+      "accuracy": 0.88836,
+      "macro_f1": 0.752462,
+      "balanced_accuracy": 0.716783,
+      "per_class": {
+        "anger": {
+          "precision": 0.878229,
+          "recall": 0.871795,
+          "f1": 0.875,
+          "support": 273
+        },
+        "contempt": {
+          "precision": 0.714286,
+          "recall": 0.3125,
+          "f1": 0.434783,
+          "support": 16
+        },
+        "disgust": {
+          "precision": 0.666667,
+          "recall": 0.444444,
+          "f1": 0.533333,
+          "support": 18
+        },
+        "fear": {
+          "precision": 0.818182,
+          "recall": 0.542169,
+          "f1": 0.652174,
+          "support": 83
+        },
+        "happiness": {
+          "precision": 0.959137,
+          "recall": 0.946249,
+          "f1": 0.952649,
+          "support": 893
+        },
+        "neutral": {
+          "precision": 0.889884,
+          "recall": 0.911927,
+          "f1": 0.90077,
+          "support": 1090
+        },
+        "sadness": {
+          "precision": 0.772846,
+          "recall": 0.770833,
+          "f1": 0.771838,
+          "support": 384
+        },
+        "surprise": {
+          "precision": 0.866511,
+          "recall": 0.934343,
+          "f1": 0.899149,
+          "support": 396
+        }
+      }
+    },
+    "confusion": [
+      [
+        238,
+        0,
+        2,
+        2,
+        8,
+        14,
+        5,
+        4
+      ],
+      [
+        4,
+        5,
+        0,
+        0,
+        1,
+        5,
+        1,
+        0
+      ],
+      [
+        6,
+        0,
+        8,
+        0,
+        1,
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        0,
+        45,
+        0,
+        5,
+        7,
+        25
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        845,
+        21,
+        11,
+        13
+      ],
+      [
+        5,
+        0,
+        1,
+        0,
+        17,
+        994,
+        63,
+        10
+      ],
+      [
+        12,
+        1,
+        0,
+        3,
+        4,
+        65,
+        296,
+        3
+      ],
+      [
+        4,
+        1,
+        0,
+        4,
+        5,
+        12,
+        0,
+        370
+      ]
+    ]
+  }
+}

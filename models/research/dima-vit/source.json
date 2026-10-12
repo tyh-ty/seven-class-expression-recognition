@@ -1,0 +1,8 @@
+{
+  "source": "https://huggingface.co/dima806/facial_emotions_image_detection",
+  "revision": "747cf16692eea925b54b7b543cf436848128b68d",
+  "model_sha256": "ffad6b9e5cb20d4857f4b532c2543055d7d0e7e1422ab7469087edaab82f8dd8",
+  "license": "Apache-2.0 per pinned publisher model card; retain attribution if deployed.",
+  "scope": "Public candidate models; claimed metrics not trusted as measured local accuracy. External training-set overlap with local benchmarks must be disclosed.",
+  "remote_code_executed": false
+}
